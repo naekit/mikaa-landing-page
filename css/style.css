@@ -102,7 +102,7 @@ h1{
     margin-top: 20px;
     color:#17212B;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
     border-bottom: 10px solid #F19B01;
 }
 /* .left a::after{
@@ -123,6 +123,11 @@ h1{
 .right{
     /* width: 80%; */
     height: 100%;
+    transition: 0.25s all ease-in-out;
+}
+.right:hover{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 .imgBox{
     width: 100%;
@@ -133,14 +138,6 @@ h1{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
-.imgBox:hover{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-.flip:hover{
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
 .sec3{
     display: flex;
     width: 100%;
@@ -150,7 +147,10 @@ h1{
     height: 100%;
     object-fit: cover;
     display: block;
-    filter:invert(1) contrast(0.9) grayscale(0.3);
+    transition: all 0.2s;
+}
+.img:hover{
+    filter: invert(1);
 }
 .left2{
     width: 100%;
@@ -158,4 +158,56 @@ h1{
 }
 .right2{
     width: 100%;
+}
+.sec4{
+    text-align: center;
+    padding: 20px;
+}
+.sec4 h1{
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    position: relative;
+}
+.sec4 h1:after {
+    content: "";
+    background: #FFE24D;
+    position: absolute;
+    bottom: 0px;
+    left: 30%;
+    width: 40%;
+    height: 20px;
+    z-index: -1;
+  }
+.clients{
+    display: flex;
+    width: 100%;
+}
+.client{
+    width: 33%;
+    text-align: center;
+    padding: 10px;
+    border-right: #17212b42 1px solid;
+    position: relative;
+}
+.client:after {
+    content: "";
+    background: #F19B01;
+    position: absolute;
+    bottom: -10px;
+    left: 38%;
+    width: 25%;
+    height: 10px;
+  }
+.noB{
+    border: none;
+}
+.client img{
+    width: 80px;
+    height: 80px;
+}
+.client p{
+    margin: 10px 0;
+}
+.client h2{
+    margin-top: 10px;
 }
