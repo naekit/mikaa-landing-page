@@ -4,7 +4,7 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 body{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(224, 224, 224);
     color: #17212B;
 }
 .banner{
@@ -218,7 +218,41 @@ h1{
     height: 30vh;
 }
 .sec5 img{
-    flex: 0.25;
-    width: 25%;
-    filter: sepia(0.3) saturate(0.9) hue-rotate(45deg);
+    width: 100%;
+    object-fit: cover top;
+    filter: sepia(0.3) saturate(0.4) brightness(0.8);
+}
+.footer{
+    background: linear-gradient(to right, #301e17,#1D1613);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.footer-nav{
+    color: #FFE24D;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.footer-nav span{
+    padding: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+.footer-nav span:hover{
+    color: aqua;
+}
+.socialIcons{
+    margin-top: 10px;
+}
+.socialIcons img{
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+    filter: hue-rotate(200deg) saturate(0.9)
+}
+.socialIcons img:hover{
+    filter: invert(1) sepia(0.3);
 }
