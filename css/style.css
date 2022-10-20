@@ -65,7 +65,7 @@ body{
     flex-direction: column;
     align-items:flex-end;
     justify-content: flex-end;
-    width: 400px;
+    /* width: 400px; */
     height: 75vh;
 }
 
@@ -73,6 +73,7 @@ body{
     color: #FFE24D;
     font-size: 4rem;
     font-weight: 700;
+    width: 90%;
 }
 .sec1, .sec2{
     display: flex;
@@ -255,4 +256,128 @@ h1{
 }
 .socialIcons img:hover{
     filter: invert(1) sepia(0.3);
+}
+#hamburger-input{
+    display: none;
+}
+#hamburger {
+    width: 40px;
+    height: 40px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 20px;
+    background: linear-gradient(
+      to bottom, 
+      #F19B01, #F19B01 20%, 
+      #3d0e6100 20%, #3d0e6100 40%, 
+      #F19B01 40%, #F19B01 60%, 
+      #3d0e6100 60%, #3d0e6100 80%, 
+      #FFE24D 80%, #FFE24D 100%
+    );
+}
+
+#hamburger #side-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 250px;
+    width: 100%;
+    height: 100%;
+    background-color: #17212B;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    transition: 0.3s ease-out;
+    text-align: center;
+    z-index: 1;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: #17212B;
+    z-index: -1;
+}
+#side-menu h3{
+    font-size: 40px;
+    width: 120px;
+    margin: 30px auto;
+    border-bottom: 4px #da452a solid;
+    border-left: 4px #da452a solid;
+}
+#side-menu a{
+    text-decoration: none;
+    color: #FFE24D;
+    transition: all 0.2s;
+}
+#side-menu a:hover{
+    text-decoration: none;
+    color: #da452a;
+}
+#side-menu li{
+    list-style: none;
+    margin: 30px auto;
+    font-size: 30px;
+    width: 120px;
+    border-bottom: 4px #da452a solid;
+    border-right: 4px #da452a solid;
+    transition: all 0.2s;
+}
+#side-menu li:hover{
+    border-color: #FFE24D;
+}
+#hamburger-input:checked + #hamburger #side-menu{
+    visibility: visible;
+    right: 0;
+}
+#hamburger-input:checked ~ .overlay{
+    visibility: visible;
+    opacity: 0.4;
+}
+@media (max-width: 575px) {
+    html{
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    .sec1{
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+        margin: 0%;
+    }
+    .sec2{
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+    }
+    .left{
+        width: 100%;
+        margin: 30px 0;
+    }
+    .sec1 .right{
+        display: none;
+    }
+    .sec3{
+        flex-direction: column;
+    }
+    .clients{
+        flex-direction: column;
+    }
+    .client{
+        width: 100%;
+        border: none;
+        margin: 30px 0;
+    }
+    #menu-main {
+        display: none;
+      }
+    #side-menu, #hamburger {
+        display: block;
+    }
 }
